@@ -5,7 +5,7 @@ module Fastlane
   module Actions
     class NugetAction < Action
       def self.run(params)
-        sh "dotnet restore #{params[:sln]} -verbosity #{params[:verbosity]}"
+        sh "nuget restore #{params[:sln]} -verbosity #{params[:verbosity]}"
       end
 
       def self.description
